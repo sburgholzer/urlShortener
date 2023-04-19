@@ -23,8 +23,10 @@ export const handler = async (event: APIGatewayProxyEvent) => {
         
 
         return formatJsonResponse({
-            data: {
-                originalUrl
+            data: {},
+            statusCode: 301, 
+            headers: {
+                Location: originalUrl
             }
         });
 
